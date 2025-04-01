@@ -1,0 +1,1033 @@
+<head>
+  <style>
+    .responsive-svg {
+      max-width: 75%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .jpg-container {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .clean-table .small {
+      font-size: 0.8em;
+      vertical-align: baseline;
+      color: #28a745;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #e0e0e0;
+      margin: 25px auto;
+      width: 75%;
+    }
+  </style>
+</head>
+<div class="tabs-container">
+  <div class="tabs">
+    <button class="tab-btn active" style="font-size: xx-large;" onclick="openTab(event, 'Tab1')">
+      <b>Reviewer 8Uht</b>
+    </button>
+    <button class="tab-btn" style="font-size: xx-large;" onclick="openTab(event, 'Tab2')">
+      <b>Reviewer ogzZ</b>
+    </button>
+    <button class="tab-btn" style="font-size: xx-large;" onclick="openTab(event, 'Tab3')">
+      <b>Reviewer qAnx</b>
+    </button>
+    <button class="tab-btn" style="font-size: xx-large;" onclick="openTab(event, 'Tab4')">
+      <b>Reviewer T5z4</b>
+    </button>
+  </div>
+
+  <div id="Tab1" class="tab-content" style="display: block">
+    <div class="content-box">
+      <div class="anchor-target" id="1" style="width: 75%; margin: 0 auto; padding: 0;">
+        <table class="clean-table">
+          <caption>
+            Table 1. The performance on the VQA.
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="2">ID</th>
+              <th colspan="3">MIMIC-CXR-VQA</th>
+              <th colspan="2">VQA-RAD</th>
+              <th colspan="2">CheXpert</th>
+            </tr>
+            <tr>
+              <th>verify</th>
+              <th>choose</th>
+              <th>query</th>
+              <th>closed</th>
+              <th>open</th>
+              <th>closed</th>
+              <th>open</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8">LLaVA-Med</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>76.34</td>
+              <td>57.58</td>
+              <td>60.76</td>
+              <td>58.09</td>
+              <td>23.05</td>
+              <td>58.02</td>
+              <td>39.50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>77.57<span class="small">(+1.23)</span> </td>
+              <td>66.97<span class="small">(+9.39)</span> </td>
+              <td>62.17<span class="small">(+1.41)</span> </td>
+              <td>59.56<span class="small">(+1.47)</span> </td>
+              <td>26.22<span class="small">(+3.17)</span></td>
+              <td>60.79<span class="small">(+2.77)</span></td>
+              <td>42.48<span class="small">(+2.98)</span></td>
+            </tr>
+            <tr>
+              <td colspan="8">GPT4RoI</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>76.17</td>
+              <td>56.34</td>
+              <td>60.39</td>
+              <td>45.59</td>
+              <td>16.49</td>
+              <td>54.55</td>
+              <td>35.66</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>78.37<span class="small">(+2.20)</span></td>
+              <td>69.14<span class="small">(+12.8)</span></td>
+              <td>62.99<span class="small">(+2.60)</span></td>
+              <td>49.63<span class="small">(+4.04)</span></td>
+              <td>19.94<span class="small">(+3.45)</span></td>
+              <td>59.41<span class="small">(+4.86)</span></td>
+              <td>38.07<span class="small">(+2.41)</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="clean-table">
+          <caption>
+            Table 2. The performance on the report generation.
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="2">ID</th>
+              <th colspan="3">Full image report generation</th>
+              <th colspan="3">Region report generation</th>
+            </tr>
+            <tr>
+              <th>R-L</th>
+              <th>BERTScore</th>
+              <th>F1CheXbert</th>
+              <th>R-L</th>
+              <th>BERTScore</th>
+              <th>F1CheXbert</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="7">LLaVA-Med</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>23.68</td>
+              <td>83.13</td>
+              <td>37.60</td>
+              <td>17.24</td>
+              <td>80.76</td>
+              <td>24.07</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>25.89<span class="small">(+2.21)</span></td>
+              <td>83.29<span class="small">(+0.16)</span></td>
+              <td>40.51<span class="small">(+2.91)</span></td>
+              <td>34.26<span class="small">(+17.02)</span></td>
+              <td>82.76<span class="small">(+2.00)</span></td>
+              <td>34.62<span class="small">(+10.55)</span></td>
+            </tr>
+            <tr>
+              <td colspan="7">GPT4RoI</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>23.76</td>
+              <td>83.23</td>
+              <td>39.45</td>
+              <td>13.50</td>
+              <td>78.58</td>
+              <td>26.66</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>25.13<span class="small">(+1.37)</span></td>
+              <td>83.86<span class="small">(+0.63)</span></td>
+              <td>44.11<span class="small">(+4.66)</span></td>
+              <td>33.82<span class="small">(+20.32)</span></td>
+              <td>82.96<span class="small">(+4.38)</span></td>
+              <td>35.42<span class="small">(+8.76)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+
+      <div>
+        <img src="./1-1.jpg" alt="figure 1" style="display: block; margin: 0 auto; width: 20%; height: auto; margin-top: 20px" class='anchor-target' id="2" />
+        <figcaption style="margin-bottom: 10;">Figure 1. The structure of region encoder.</figcaption>
+      </div>
+      <hr />
+
+      <div style="height: 10px;"></div>
+
+      <div class="anchor-target" id="3" style="width: 75%; margin: 0 auto; padding: 0;">
+        <table class="clean-table" style="margin-top:0">
+          <caption>
+            Table 3. Comparison between our region encoder and RoIAlign only.
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="2">ID</th>
+              <th rowspan="2">Condition</th>
+              <th colspan="3">VQA</th>
+              <th>Referring</th>
+              <th colspan="3">Grounding</th>
+            </tr>
+            <tr>
+              <th>verify</th>
+              <th>choose</th>
+              <th>query</th>
+              <th>Acc</th>
+              <th>R@0.3</th>
+              <th>R@0.5</th>
+              <th>R@0.7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Only RoIAlign</td>
+              <td>79.78</td>
+              <td>69.76</td>
+              <td>63.56</td>
+              <td>98.43</td>
+              <td>98.51</td>
+              <td>96.46</td>
+              <td>89.51</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Our region encoder</td>
+              <td>80.68</td>
+              <td>70.16</td>
+              <td>65.43</td>
+              <td>98.58</td>
+              <td>98.56</td>
+              <td>96.62</td>
+              <td>90.40</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <hr />
+
+      <div class="anchor-target" id="4" style="width: 75%; margin: 0 auto; padding: 0;">
+        <table class="clean-table">
+          <caption>
+            Table 4. The score of AOR's reasoning steps
+          </caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Accuracy</th>
+              <th>Completeness</th>
+              <th>Consistency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4">GPT-4o</td>
+            </tr>
+            <tr>
+              <td>LLaVA-o1</td>
+              <td>2.52</td>
+              <td>3.03</td>
+              <td>3.86</td>
+            </tr>
+            <tr>
+              <td>AOR (Ours)</td>
+              <td>3.65</td>
+              <td>4.13</td>
+              <td>4.20</td>
+            </tr>
+            <tr>
+              <td colspan="4">Radiologist</td>
+            </tr>
+            <tr>
+              <td>LLaVA-o1</td>
+              <td>2.68</td>
+              <td>2.97</td>
+              <td>4.11</td>
+            </tr>
+            <tr>
+              <td>AOR (Ours)</td>
+              <td>3.83</td>
+              <td>4.49</td>
+              <td>4.55</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr />
+
+      <div>
+        <style>
+          .clean-table {
+            border-collapse: collapse;
+            margin: 25px auto;
+            width: auto;
+            max-width: 70%;
+            table-layout: fixed;
+            font-family: "Segoe UI", sans-serif;
+            border: 2px solid #2c3e50;
+          }
+
+          .clean-table th,
+          .clean-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            position: relative;
+          }
+
+          .clean-table thead {
+            border-bottom: 2px solid #2c3e50;
+          }
+
+          .clean-table th {
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+          }
+
+          .clean-table tbody tr:not(:last-child) td {
+            border-bottom: 1px solid #e0e0e0;
+          }
+
+          .clean-table td:first-child {
+            font-weight: 500;
+          }
+
+          .clean-table tr:hover td {
+            background-color: #f8f9fa !important;
+          }
+        </style>
+        <div class="anchor-target" id="5" style="width: 75%; margin: 0 auto; padding: 0;">
+          <table class="clean-table" style="margin-top: 10;">
+            <caption style="padding-top: 0;">
+              Table 5. 68 attributes grouped into 5 categories.
+            </caption>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>attributes</th>
+              </tr>
+              <tr>
+                <td>anatomical finding</td>
+                <td style="text-align: left !important">
+                  lung opacity, airspace opacity, consolidation, infiltration,
+                  atelectasis, linear/patchy atelectasis, lobar/segmental
+                  collapse, pulmonary edema/hazy opacity, vascular congestion,
+                  vascular redistribution, increased reticular markings/ild
+                  pattern, pleural effusion, costophrenic angle blunting,
+                  pleural/parenchymal scarring, bronchiectasis, enlarged cardiac
+                  silhouette, mediastinal displacement, mediastinal widening,
+                  enlarged hilum, tortuous aorta, vascular calcification,
+                  pneumomediastinum, pneumothorax, hydropneumothorax, lung
+                  lesion, mass/nodule (not otherwise specified), multiple
+                  masses/nodules, calcified nodule, superior mediastinal
+                  mass/enlargement, rib fracture, clavicle fracture, spinal
+                  fracture, hyperaeration, cyst/bullae, elevated hemidiaphragm,
+                  diaphragmatic eventration (benign), sub-diaphragmatic air,
+                  subcutaneous air, hernia, scoliosis, spinal degenerative
+                  changes, shoulder osteoarthritis, bone lesion
+                </td>
+              </tr>
+              <tr>
+                <td>device</td>
+                <td style="text-align: left !important">
+                  sternotomy wires, cabg grafts, aortic graft/repair, prosthetic
+                  valve, cardiac pacer and wires
+                </td>
+              </tr>
+              <tr>
+                <td>disease</td>
+                <td style="text-align: left !important">
+                  pneumonia, fluid overload/heart failure, copd/emphysema,
+                  granulomatous disease, interstitial lung disease, goiter, lung
+                  cancer, aspiration, alveolar hemorrhage, pericardial effusion
+                </td>
+              </tr>
+              <tr>
+                <td>technical assessment</td>
+                <td style="text-align: left !important">
+                  low lung volumes, rotated, artifact, breast/nipple shadows,
+                  skin fold
+                </td>
+              </tr>
+              <tr>
+                <td>tubes and lines</td>
+                <td style="text-align: left !important">
+                  chest tube, mediastinal drain, pigtail catheter, endotracheal
+                  tube, tracheostomy tube, picc, ij line, chest port,
+                  subclavian line, swan-ganz catheter, intra-aortic balloon
+                  pump, enteric tube
+                </td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <hr />
+
+      <div>
+        <div class="anchor-target" id="6">
+          <table class="clean-table">
+            <caption>
+              Table 6. Taking the cardiac silhouette as an example, we present
+              the corresponding CoT answers for its attribute, category, and
+              abnormality.
+            </caption>
+            <thead>
+              <tr>
+                <th colspan="2" style="font-weight: normal;">
+                  <b>Attribute</b>: Two attributes of the cardiac silhouette,
+                  i.e., fluid overload/heart failure and pericardial effusion,
+                  the CoT answers are as follows:
+                </th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="./t-1.jpg" width="92" height="88" />
+                </td>
+                <td style="text-align: left !important">
+                  <b>fluid overload/heart failure</b><br />Find the cardiac
+                  silhouette &lt;cot_bbox_1&gt;. Measure the maximal horizontal
+                  diameter of the cardiac silhouette &lt;cot_bbox_1&gt; and the
+                  maximal horizontal diameter of the thorax
+                  &lt;cot_merge_bbox_1&gt;. Observe the cardiac silhouette's
+                  &lt;cot_bbox_1&gt; shape, maintaining its original form.
+                  Considering all observations, there is fluid overload/heart
+                  failure in the cardiac silhouette &lt;cot_bbox_1&gt;. So the
+                  answer is yes.
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./t-2.jpg" width="92" height="88" />
+                </td>
+                <td style="text-align: left !important">
+                  <b>pericardial effusion</b><br />Find the cardiac silhouette
+                  &lt;cot_bbox_1&gt;. Measure the maximal horizontal diameter of
+                  the cardiac silhouette &lt;cot_bbox_1&gt; and the maximal
+                  horizontal diameter of the thorax &lt;cot_merge_bbox_1&gt;.
+                  Observe the cardiac silhouette's &lt;cot_bbox_1&gt; shape,
+                  deformed, appearing narrow at the top and wide at the bottom,
+                  resembling a flask. Considering all observations, there is
+                  pericardial effusion in the cardiac silhouette
+                  &lt;cot_bbox_1&gt;. So the answer is yes.
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="font-weight: normal;">
+                  <b>Category</b>: One category of the cardiac silhouette, i.e.,
+                  disease, we first utilize Ontology 3 to identify the possible
+                  attributes associated with cardiac silhouette diseases, namely
+                  pericardial effusion and fluid overload/heart failure, and
+                  then construct the corresponding CoT
+                  answers:
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./t-3.jpg" width="92" height="88" />
+                </td>
+                <td style="text-align: left !important">
+                  <b>disease</b><br />Find the cardiac silhouette
+                  &lt;cot_bbox_1&gt;. Measure the maximal horizontal diameter of
+                  the cardiac silhouette &lt;cot_bbox_1&gt; and the maximal
+                  horizontal diameter of the thorax &lt;cot_merge_bbox_1&gt;.
+                  The cardiothoracic ratio is more than 50%, indicating there is
+                  disease in the cardiac silhouette &lt;cot_bbox_1&gt;. So the
+                  answer is yes.<br />
+                  <font color="blue">Note: Here, it is sufficient to directly assess the size of
+                    the heart without evaluating each specific cardiac condition
+                    individually, as an enlarged heart necessarily indicates the
+                    presence of disease.</font>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="font-weight: normal;">
+                  <b>Abnormality</b>: For the most general question, namely whether the heart is normal, a broader consideration is required that encompasses all five categories. The corresponding CoT answers are:
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./t-4.jpg" width="92" height="88" />
+                </td>
+                <td style="text-align: left !important">
+                  Find the cardiac silhouette &lt;cot_bbox_1&gt;. (<font color="blue"> anatomical finding, disease</font>)Measure the maximal horizontal diameter of the cardiac
+                  silhouette &lt;cot_bbox_1&gt; and the maximal horizontal
+                  diameter of the thorax &lt;cot_merge_bbox_1&gt;. (<font color="blue">technical
+                    assessment</font>) Observe the position of the cardiac silhouette
+                  &lt;cot_bbox_1&gt; within the entire thorax
+                  &lt;cot_merge_bbox_1&gt;. (device, tubes and lines)Observe the
+                  cavoatrial junction &lt;cot_bbox_2&gt;, the right atrium
+                  &lt;cot_bbox_3&gt;, and the cardiac silhouette
+                  &lt;cot_bbox_1&gt;. Considering all observations, the cardiac
+                  silhouette &lt;cot_bbox_1&gt; is abnormal. So the answer is
+                  yes.
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div id="Tab2" class="tab-content">
+  <div class="content-box">
+
+    <div class='anchor-target' id='7' style="width: 75%; margin: 0 auto; padding: 0;">
+      <table class="clean-table">
+        <caption>
+          Table 1. Additional training hyperparameters
+        </caption>
+        <thead>
+          <tr>
+            <th>Configuration</th>
+            <th>Stage 1</th>
+            <th>Stage 2</th>
+            <th>Stage 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Optimizer Hyperparameters</td>
+            <td>betas=(0.9,0.99), eps=1e-8</td>
+            <td>betas=(0.9,0.99), eps=1e-8</td>
+            <td>betas=(0.9,0.99), eps=1e-8</td>
+          </tr>
+          <tr>
+            <td>Learning rate schedule</td>
+            <td>Cosine</td>
+            <td>Cosine</td>
+            <td>Cosine</td>
+          </tr>
+          <tr>
+            <td>Numerical precision</td>
+            <td>bfloat16</td>
+            <td>bfloat16</td>
+            <td>bfloat16</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+
+
+    <div class='anchor-target' id='8' style="width: 75%; margin: 0 auto; padding: 0;">
+      <div class="jpg-container">
+        <img src="./2.jpg" alt="svg 2" class="responsive-svg" />
+        <figcaption>Fig. 1 Visualizations of CoT answers for anatomical regions that do not require further subdivision.</figcaption>
+      </div>
+      <div class="jpg-container">
+        <img src="./3.jpg" alt="svg 3" class="responsive-svg" />
+        <figcaption>Fig. 2 Visualizations of different CoT answers for different attributes within the same anatomical region.</figcaption>
+      </div>
+
+      <div class="jpg-container">
+        <img src="./4.jpg" alt="svg 4" class="responsive-svg" />
+        <figcaption>Fig. 3 Visualizations of CoT answers for different tubes and lines within the same anatomical region.</figcaption>
+      </div>
+
+      <div class="jpg-container">
+        <img src="./5.jpg" alt="svg 5" class="responsive-svg" />
+        <figcaption>Fig. 4 Visualizations showing that different attributes focus on different anatomical regions.</figcaption>
+      </div>
+
+      <div class="jpg-container">
+        <img src="./6.jpg" alt="svg 6" class="responsive-svg" />
+        <figcaption>Fig. 5 Visualizations of CoT answers distinguishing between two attributes with similar findings.</figcaption>
+      </div>
+
+      <div class="jpg-container">
+        <img src="./7.jpg" alt="svg 7" class="responsive-svg" />
+      </div>
+
+      <div class="jpg-container">
+        <img src="./8.jpg" alt="svg 8" class="responsive-svg" />
+        <figcaption>Fig. 6 Visualizations of CoT answers for composite questions.</figcaption>
+      </div>
+    </div>
+
+    <hr />
+
+
+    <div class='anchor-target' id='9' style="width: 50%; margin: 0 auto; padding: 0;">
+      <table class="clean-table">
+        <caption>
+          Table 2. Performance gain from CoT answers on VQA-RAD.
+        </caption>
+        <thead>
+          <tr>
+            <th rowspan="2"></th>
+            <th colspan="2">1 epoch</th>
+            <th colspan="2">3 epochs</th>
+          </tr>
+          <tr>
+            <th>closed</th>
+            <th>open</th>
+            <th>closed</th>
+            <th>open</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>w/o CoT</td>
+            <td>66.38</td>
+            <td>32.56</td>
+            <td>83.62</td>
+            <td>59.33</td>
+          </tr>
+          <tr>
+            <td>w/ CoT</td>
+            <td>68.97</td>
+            <td>37.16</td>
+            <td>89.66</td>
+            <td>65.23</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+    <div class='anchor-target' id='10' style="width: 90%; margin: 0 auto; padding: 0;">
+      <table class='clean-table'>
+        <thead>
+          <caption>
+            Table 3. CoT answers of different modalities.
+          </caption>
+          <tr>
+            <th>Modality</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left !important"><b>Chest CT</b><img src="t-5.png" width="87" height="80"></td>
+            <td style="text-align: left !important">Q: Is there a mass in the left lung?<br>CoT answer: Find the left lung &lt;3d_bbox_1&gt; <img src="t-6.png" width="38" height="41" style="vertical-align: middle">. Observe the left upper lobe &lt;3d_bbox_2&gt; <img src="t-7.png" width="32" height="38">, the left lower lobe &lt;3d_bbox_3&gt; <img src="t-8.png" width="41" height="44" style="vertical-align: middle">, and the left lung &lt;3d_bbox_1&gt; <img src="t-6.png" width="38" height="41" style="vertical-align: middle">. Considering all observations, there is no mass in the left lung &lt;3d_bbox_1&gt; <img src="t-6.png" width="38" height="41" style="vertical-align: middle">. So the answer is no. </td>
+
+          </tr>
+          <tr class='anchor-target' id='11'>
+            <td style="text-align: left !important"><b>Abdominal CT</b><br><img src="t-12.png" width="95" height="75" style="vertical-align: middle"></td>
+            <td style="text-align: left !important">Q: Is there a gastric tube in the stomach?<br>CoT answer: Find the stomach &lt;3d_bbox_4&gt; <img src="t-13.png" width="38" height="43" style="vertical-align: middle">, and there is no gastric tube in the stomach &lt;3d_bbox_4&gt; <img src="t-13.png" width="38" height="43" style="vertical-align: middle">. So the answer is no.</td>
+          </tr>
+          <tr class='anchor-target' id='12'>
+            <td style="text-align: left !important"><b>Brain MRI</b><br><img src="t-15.png" width="84" height="79"></td>
+            <td style="text-align: left !important">Q: Is there communicating hydrocephalus?<br>CoT answer: Find the left lateral ventricle &lt;3d_bbox_5&gt; <img src="t-16.png" width="34" height="41" style="vertical-align: middle">and right lateral ventricle &lt;3d_bbox_6&gt; <img src="t-17.png" width="39" height="43" style="vertical-align: middle">. Both are symmetrically enlarged, suggesting communicating hydrocephalus. So the answer is yes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+
+    <div class='anchor-target' id='13' style="width: 50%; margin: 0 auto; padding: 0;">
+      <table class="clean-table">
+        <caption>
+          Table 4. The performance of CT region report generation.
+        </caption>
+        <thead>
+          <tr>
+            <th rowspan="2">ID</th>
+            <th colspan="3">Region report generation</th>
+          </tr>
+          <tr>
+            <th>R-L</th>
+            <th>BERTScore</th>
+            <th>F1CheXbert</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>8.09</td>
+            <td>68.33</td>
+            <td>13.94</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>16.45</td>
+            <td>79.18</td>
+            <td>20.72</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+<div id="Tab3" class="tab-content">
+  <div class="content-box">
+    <div class='anchor-target' id='14' style="width: 75%; margin: 0 auto; padding: 0;">
+      <table class="clean-table">
+        <caption>
+          Table 1. The Hierarchical anatomical regions in different modalities
+        </caption>
+        <thead>
+          <tr>
+            <th>Modality</th>
+            <th>Anatomical Regions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chest CT</td>
+            <td>Lungs(Right upper lobe, right middle lobe, right lower lobe, left upper lobe, left lower lobe), Mediastinum (Anterior mediastinum-anterior to the heart and great vessels, Middle mediastinum-including the heart, great vessels, and trachea, Posterior mediastinum-posterior to the heart and great vessels), Chest wall (bony structures, pleura, chest wall musculature and soft tissues).</td>
+          </tr>
+          <tr>
+            <td>Abdominal CT</td>
+            <td>Liver, spleen, pancreas, bilateral kidneys, bilateral adrenal glands, gallbladder, stomach, small intestine, colon and rectum, peritoneal cavity, retroperitoneal space, bladder, uterus, bilateral ovaries, and abdominal wall osseous structures and soft tissues.</td>
+          </tr>
+          <tr>
+            <td>Brain MRI</td>
+            <td>Bilateral cerebral hemispheres (frontal lobes, parietal lobes, temporal lobes, occipital lobes, insular cortex, basal ganglia, internal and external capsules), Bilateral thalami, Brainstem, Cerebellum, Ventricular system(bilateral lateral ventricles, third ventricle, fourth ventricle), Cisternal spaces, Subarachnoid space.</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class='clean-table'>
+        <caption>
+          Table 2. CoT answers of different modalities.
+        </caption>
+        <thead>
+
+          <tr>
+            <th>Modality</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left !important"><b>Chest CT</b><br><img src="t-5.png" width="87" height="80"></td>
+            <td style="text-align: left !important">Q: Is there a mass in the left lung?<br>CoT answer: Find the left lung &lt;3d_bbox_1&gt; <img src="t-6.png" width="38" height="41" style="vertical-align: middle">. Observe the left upper lobe &lt;3d_bbox_2&gt; <img src="t-7.png" width="32" height="38">, the left lower lobe &lt;3d_bbox_3&gt; <img src="t-8.png" width="41" height="44" style="vertical-align: middle">, and the left lung &lt;3d_bbox_1&gt; <img src="t-6.png" width="38" height="41" style="vertical-align: middle">. Considering all observations, there is no mass in the left lung &lt;3d_bbox_1&gt; <img src="t-6.png" width="38" height="41" style="vertical-align: middle">. So the answer is no. </td>
+
+          </tr>
+          <tr>
+            <td style="text-align: left !important"><b>Abdominal CT</b><br><img src="t-12.png" width="95" height="75" style="vertical-align: middle"></td>
+            <td style="text-align: left !important">Q: Is there a gastric tube in the stomach?<br>CoT answer: Find the stomach &lt;3d_bbox_4&gt; <img src="t-13.png" width="38" height="43" style="vertical-align: middle">, and there is no gastric tube in the stomach &lt;3d_bbox_4&gt; <img src="t-13.png" width="38" height="43" style="vertical-align: middle">. So the answer is no.</td>
+          </tr>
+          <tr>
+            <td style="text-align: left !important"><b>Brain MRI</b><br><img src="t-15.png" width="84" height="79"></td>
+            <td style="text-align: left !important">Q: Is there communicating hydrocephalus?<br>CoT answer: Find the left lateral ventricle &lt;3d_bbox_5&gt; <img src="t-16.png" width="34" height="41" style="vertical-align: middle">and right lateral ventricle &lt;3d_bbox_6&gt; <img src="t-17.png" width="39" height="43" style="vertical-align: middle">. Both are symmetrically enlarged, suggesting communicating hydrocephalus. So the answer is yes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<div id="Tab4" class="tab-content">
+  <div class="content-box">
+    <div class='anchor-target' id='15' style="width: 75%; margin: 0 auto; padding: 0;">
+      <table class="clean-table">
+        <caption>
+          Table 1. The impact of bbox expand.
+        </caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>30% shift</th>
+            <th>30% shift + 10% expand</th>
+            <th>40% shift</th>
+            <th>40% shift + 10% expand</th>
+            <th>50% shift</th>
+            <th>50% shift + 10% expand</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>verify</td>
+            <td>80.26</td>
+            <td>79.80<span class="small" style="color: red;">(-0.46)</span></td>
+            <td>79.59</td>
+            <td>80.39<span class="small">(+0.80)</span></td>
+            <td>78.39</td>
+            <td>78.10<span class="small" style="color: red;">(-0.29)</span></td>
+          </tr>
+          <tr>
+            <td>choose</td>
+            <td>68.88</td>
+            <td>70.26<span class="small">(+1.38)</span></td>
+            <td>67.56</td>
+            <td>68.61<span class="small">(+1.05)</span></td>
+            <td>65.73</td>
+            <td>66.78<span class="small">(+1.05)</span></td>
+          </tr>
+          <tr>
+            <td>query</td>
+            <td>63.35</td>
+            <td>63.80<span class="small">(+0.45)</span></td>
+            <td>62.79</td>
+            <td>63.29<span class="small">(+0.50)</span></td>
+            <td>61.67</td>
+            <td>62.63<span class="small">(+0.96)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+
+    <div class="content-box">
+      <div class="jpg-container">
+        <img src="./review4.jpg" alt="svg 2" id="16" class="responsive-svg anchor-target" style="max-width: 60%;" />
+        <figcaption>Fig 1. The error analysis in the VQA task.</figcaption>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .anchor-target {
+    scroll-margin-top: 80px;
+    transform: translateZ(0);
+    contain: content;
+  }
+
+  .anchor-highlight {
+    background-color: rgba(232, 245, 233, 0.3) !important;
+    padding: 5px !important;
+    margin-top: -5px !important;
+    margin-bottom: -5px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 3px !important;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3) !important;
+    position: relative;
+    animation: none !important;
+  }
+
+  .focus-effect {
+    animation: pulse-border 2.5s ease-out forwards;
+  }
+
+  .anchor-highlight::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 2px;
+    background: rgba(40, 167, 69, 0.0.2);
+    animation: breathing 3s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  .anchor-target {
+    scroll-margin-top: 80px;
+  }
+
+  .highlight {
+    animation: highlight 2s ease-out;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.02);
+  }
+
+  -->.tabs-container {
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    margin: 20px;
+  }
+
+  .tabs {
+    display: flex;
+    background: #f8f8f8;
+    position: relative;
+  }
+
+  .tab-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #666;
+    transition: all 0.25s;
+    position: relative;
+    border-bottom: 2px solid transparent;
+  }
+
+  .tab-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .tab-btn.active {
+    color: #222;
+    font-weight: 500;
+    border-bottom: 2px solid #28a745;
+    background: #fff;
+    z-index: 2;
+    margin-bottom: -2px;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 20px;
+  }
+
+  .content-box {
+    padding: 18px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
+
+  figcaption,
+  .clean-table caption {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  figcaption {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    padding: 0 10px;
+  }
+
+  .clean-table caption {
+    white-space: nowrap;
+    caption-side: top;
+    margin-bottom: 12px;
+  }
+</style>
+
+<script>
+  function openTab(evt, tabName, targetId) {
+    const contents = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-btn");
+
+    contents.forEach((c) => (c.style.display = "none"));
+    buttons.forEach((b) => b.classList.remove("active"));
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+
+    if (targetId) {
+      setTimeout(() => {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+          target.classList.add("highlight");
+          setTimeout(() => target.classList.remove("highlight"), 2000);
+        }
+      }, 50);
+    }
+    const hash = window.location.hash.substr(1);
+    if (hash) {
+      setTimeout(() => {
+        const target = document.getElementById(hash);
+        if (target) {
+          target.scrollIntoView({
+            behavior: "auto",
+            block: "center",
+          });
+          highlightTarget(target);
+        }
+      }, 100);
+    }
+  }
+
+  function highlightTarget(target) {
+    document.querySelectorAll(".anchor-highlight").forEach((el) => {
+      el.classList.remove("anchor-highlight", "focus-effect");
+    });
+
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "center",
+        });
+      }, 50);
+
+      target.classList.add("anchor-highlight", "focus-effect");
+
+      setTimeout(() => {
+        target.classList.remove("anchor-highlight", "focus-effect");
+      }, 10000);
+    }
+  }
+
+  window.addEventListener("load", () => {
+    const hash = window.location.hash.substr(1);
+    if (hash) {
+      setTimeout(() => {
+        const target = document.getElementById(hash);
+        if (target) {
+          const tabContent = target.closest(".tab-content");
+          if (tabContent) {
+            const tabId = tabContent.id;
+            const tabButton = document.querySelector(
+              `button[onclick*="${tabId}"]`,
+            );
+            if (tabButton) {
+              tabButton.click();
+              setTimeout(() => {
+                highlightTarget(target);
+              }, 300);
+            }
+          }
+        }
+      }, 500);
+    }
+  });
+</script>
+</div>
